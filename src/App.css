@@ -1,0 +1,216 @@
+:root {
+    --primary-color: #818cf8;
+    --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-highlight: rgba(255, 255, 255, 0.1);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+}
+
+.main-layout {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glass Card */
+.glass-container {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Typography */
+.main-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+}
+
+.subtitle {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    letter-spacing: 0.02em;
+}
+
+/* PrimeReact DataTable Override for Glass/Dark Theme */
+.p-datatable {
+    font-family: 'Inter', sans-serif;
+}
+
+.p-datatable .p-datatable-header {
+    background: transparent;
+    border: none;
+    padding: 1rem 0;
+}
+
+.p-datatable .p-datatable-thead>tr>th {
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--text-secondary);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid var(--glass-border);
+    border-top: none;
+}
+
+.p-datatable .p-datatable-tbody>tr {
+    background: transparent !important;
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+}
+
+.p-datatable .p-datatable-tbody>tr>td {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.p-datatable .p-datatable-tbody>tr:hover {
+    background: var(--glass-highlight) !important;
+    transform: scale(1.002);
+}
+
+.p-datatable .p-datatable-tbody>tr.p-highlight {
+    background: rgba(99, 102, 241, 0.1) !important;
+    color: #fff !important;
+}
+
+/* Custom Checkbox */
+.p-checkbox .p-checkbox-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--text-secondary);
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.p-checkbox .p-checkbox-box.p-highlight {
+    background: #6366f1;
+    border-color: #6366f1;
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+}
+
+/* Paginator */
+.p-paginator {
+    background: transparent;
+    border: none;
+    padding-top: 2rem;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page,
+.p-paginator .p-paginator-first,
+.p-paginator .p-paginator-prev,
+.p-paginator .p-paginator-next,
+.p-paginator .p-paginator-last {
+    background: transparent;
+    color: var(--text-secondary);
+    border-radius: 50%;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page:hover {
+    background: var(--glass-highlight);
+    color: white;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background: #6366f1;
+    color: white;
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+}
+
+/* Overlay Panel */
+.p-overlaypanel {
+    background: #1e1b4b;
+    /* Deep Indigo */
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.p-overlaypanel:before,
+.p-overlaypanel:after {
+    display: none !important;
+    /* Remove arrow */
+}
+
+.p-overlaypanel .p-overlaypanel-content {
+    padding: 0;
+}
+
+/* Buttons and Inputs */
+.p-button {
+    background: var(--primary-gradient);
+    border: none;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+}
+
+.p-button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.p-inputtext {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--glass-border);
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.p-inputtext:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* Custom Selection Trigger Button */
+.custom-select-btn {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: white !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 12px !important;
+    padding: 0.8rem 1.5rem !important;
+    transition: all 0.2s !important;
+}
+
+.custom-select-btn:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Skeletons */
+.p-skeleton {
+    background-color: rgba(255, 255, 255, 0.1);
+}
