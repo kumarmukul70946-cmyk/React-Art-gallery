@@ -37,6 +37,7 @@
     border-radius: 24px;
     padding: 2.5rem;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    overflow-x: auto; /* Enable scrolling for the table */
 }
 
 /* Typography */
@@ -213,4 +214,38 @@
 /* Skeletons */
 .p-skeleton {
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .main-layout {
+        padding: 1rem;
+    }
+
+    .glass-container {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .main-title {
+        font-size: 2.25rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    /* Adjust DataTable headers for mobile */
+    .p-datatable .p-datatable-thead>tr>th {
+        padding: 1rem 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .p-datatable .p-datatable-tbody>tr>td {
+        padding: 1rem 0.5rem;
+    }
+    
+    .custom-select-btn {
+        width: 100%; /* Full width button on mobile */
+    }
 }

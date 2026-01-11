@@ -145,7 +145,7 @@ function App() {
   return (
     <div className="main-layout">
       <div className="glass-container">
-        <div className="flex justify-content-between align-items-end mb-5">
+        <div className="flex flex-column md:flex-row justify-content-between align-items-start md:align-items-end mb-5 gap-3 md:gap-0">
           <div>
             <h1 className="main-title">Art Institute of Chicago</h1>
             <p className="subtitle">Discover Artwork Collection</p>
